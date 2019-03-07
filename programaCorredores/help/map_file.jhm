@@ -1,0 +1,6 @@
+<map version="1.0">
+   <mapID target="aplicacion" url="html/pantallaPrincipal.html" />
+   <mapID target="ventanaCorredores" url="html/corredores.html" />
+   <mapID target="ventanaCarreras" url="html/carreras.html" />
+   <mapID target="iniciarLaCarrera" url="html/iniciarCarrera.html" />
+  </map>

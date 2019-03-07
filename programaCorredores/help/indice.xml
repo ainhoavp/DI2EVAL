@@ -1,0 +1,6 @@
+<index version="1.0">
+   <indexitem text="Pantalla principal" target="aplicacion"/>
+   <indexitem text="Pantalla corredores" target="ventanaCorredores"/>
+   <indexitem text="Pantalla carreras" target="ventanaCarreras"/>
+   <indexitem text="Pantalla iniciar carrera" target="iniciarLaCarrera"/>
+</index>

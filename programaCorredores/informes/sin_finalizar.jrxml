@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="sin_finalizar" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b1d73688-455e-4b60-a815-cb783703ebfa">
+	<property name="ireport.zoom" value="1.7715610000000013"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="lugarCarrera" class="java.lang.String">
+		<fieldDescription><![CDATA[lugarCarrera]]></fieldDescription>
+	</field>
+	<field name="nombreCarrera" class="java.lang.String">
+		<fieldDescription><![CDATA[nombreCarrera]]></fieldDescription>
+	</field>
+	<field name="numeroParticipantes" class="java.lang.Integer">
+		<fieldDescription><![CDATA[numeroParticipantes]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="32" splitType="Stretch">
+			<staticText>
+				<reportElement x="159" y="0" width="216" height="22" forecolor="#00CCCC" backcolor="#FFFFFF" uuid="4d530b2a-2bc8-460a-8c90-efbbcb692504"/>
+				<textElement>
+					<font size="16" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[CARRERAS SIN FINALIZAR]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="49" splitType="Stretch">
+			<staticText>
+				<reportElement x="159" y="2" width="100" height="20" uuid="400132aa-10b6-4e60-96e9-40ef5168efc7"/>
+				<textElement textAlignment="Center">
+					<font isBold="true" isItalic="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Lugar Carrera]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="13" y="2" width="100" height="20" uuid="5ada2282-23cd-4e32-9e12-fb153be6527c"/>
+				<textElement textAlignment="Center">
+					<font isBold="true" isItalic="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Nombre Carrera]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="315" y="2" width="100" height="20" uuid="fb92495f-2397-46c4-ab76-086914cc1967"/>
+				<textElement textAlignment="Center">
+					<font isBold="true" isItalic="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Numero Participantes]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="62" splitType="Stretch">
+			<textField>
+				<reportElement x="159" y="2" width="100" height="20" uuid="f9bee372-55d6-40cd-836c-3f25bc2be3a2"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{lugarCarrera}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="13" y="2" width="100" height="20" uuid="928e081d-82c1-4e30-8943-bc0c326eaf6e"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{nombreCarrera}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="292" y="2" width="123" height="20" uuid="1ed28c90-cb1c-4e88-bf31-1cd28ddd157d"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{numeroParticipantes}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

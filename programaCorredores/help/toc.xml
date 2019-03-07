@@ -1,0 +1,7 @@
+<toc version="1.0">
+   <tocitem text="Pantalla principal" target="aplicacion">
+      <tocitem text="Pantalla corredores" target="ventanaCorredores"/>
+      <tocitem text="Pantalla carreras" target="ventanaCarreras"/>
+      <tocitem text="Pantalla iniciar carrera" target="iniciarLaCarrera"/>
+   </tocitem>
+</toc>

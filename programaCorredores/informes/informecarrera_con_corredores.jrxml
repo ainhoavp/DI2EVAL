@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="informecarrera_con_corredores" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f4debb12-af8b-476d-bd54-4ed7bdd8d12c">
+	<property name="ireport.zoom" value="1.3310000000000004"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\Users\\aainh\\Desktop\\2DAM\\DI\\Corredores\\DI1819-master\\CorredoresConsola\\dist\\"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="numeroParticipantes" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="finalizada" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[finalizada]]></fieldDescription>
+	</field>
+	<field name="listaCorredores" class="java.util.List">
+		<fieldDescription><![CDATA[listaCorredores]]></fieldDescription>
+	</field>
+	<field name="lugarCarrera" class="java.lang.String">
+		<fieldDescription><![CDATA[lugarCarrera]]></fieldDescription>
+	</field>
+	<field name="nombreCarrera" class="java.lang.String">
+		<fieldDescription><![CDATA[nombreCarrera]]></fieldDescription>
+	</field>
+	<field name="numPart" class="java.lang.Integer">
+		<fieldDescription><![CDATA[numPart]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="59" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="366" height="58" forecolor="#0033CC" uuid="f7059f79-ae5d-41d6-87db-ae28acbf4829"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="30" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombreCarrera}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="366" y="0" width="189" height="58" uuid="d2993fc0-2448-45f1-aa88-f01f20497392"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{finalizada} == true?"FINALIZADA":"PENDIENTE"]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="30" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20" uuid="e10e1868-cce1-4992-9c5e-99b51163aabc"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Lugar:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="122" y="0" width="144" height="20" uuid="0b1447e6-6573-4a4b-b43b-8c9c5b1f1192"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Número de participantes:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="279" y="0" width="262" height="20" uuid="5eb4c68f-5931-4cfa-baec-42e873df636f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Lista participantes:]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="109" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="100" height="20" uuid="5219a0f1-15e5-4c48-8a4a-ba96fc9c4903"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{lugarCarrera}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-288" y="88" width="116" height="20" uuid="1407d24b-033e-487b-b8de-8b1b2beb9972"/>
+				<textFieldExpression><![CDATA[$F{numPart}]]></textFieldExpression>
+			</textField>
+			<subreport>
+				<reportElement x="279" y="9" width="276" height="100" uuid="fa531925-b872-4e14-8f45-a410b77c2685"/>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{listaCorredores})]]></dataSourceExpression>
+				<subreportExpression><![CDATA["informecarrera_con_corredores_listaparticipantes.jasper"]]></subreportExpression>
+			</subreport>
+			<textField>
+				<reportElement x="122" y="0" width="116" height="20" uuid="8bfb9157-236e-4323-8c7c-f7cc98a2efc6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{numeroParticipantes}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
