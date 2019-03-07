@@ -1,0 +1,13 @@
+﻿<Window x:Class="GestionAvituallamientos.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\aainh\Documents\Visual Studio 2012\Projects\GestionAvituallamientos\GestionAvituallamientos\img\carrera.png"/>
+        </Grid.Background>
+        <Button x:Name="btGestionProductos" Content="Gestión productos" HorizontalAlignment="Left" Margin="46,249,0,0" VerticalAlignment="Top" Width="153" Height="46" Background="White" Opacity="0.8" Click="btGestionProductos_Click"/>
+        <Button x:Name="btGestionAvitualla" Content="Gestión avituallamiento" HorizontalAlignment="Left" Margin="313,249,0,0" VerticalAlignment="Top" Width="174" Height="46" Background="White" Opacity="0.8" Click="btGestionAvitualla_Click"/>
+
+    </Grid>
+</Window>

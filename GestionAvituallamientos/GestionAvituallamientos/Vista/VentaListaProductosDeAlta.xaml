@@ -1,0 +1,18 @@
+﻿<Window x:Class="GestionAvituallamientos.Vista.VentaListaProductosDeAlta"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="VentaListaProductosDeAlta" Height="266.4" Width="400.8">
+    <Grid Background="#FFEDEDED" HorizontalAlignment="Left" Margin="0,0,0,-0.2" Width="394">
+        <DataGrid x:Name="dataGridProductosDisponibles" Height="88" ItemsSource="{Binding Path=Logica.ListaProductos}" SelectedItem="{Binding Path=ProductoAvituallamiento.Producto}" Margin="10,57,10,0" VerticalAlignment="Top" AutoGenerateColumns="False" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Path=Nombre}" CanUserResize="False" ClipboardContentBinding="{x:Null}" Header="Nombre" Width="3*"/>
+                <DataGridTextColumn Binding="{Binding Path=TipoProducto}" CanUserResize="False" ClipboardContentBinding="{x:Null}" Header="Tipo" Width="3*"/>
+                <DataGridTextColumn Binding="{Binding Path=Precio}" CanUserResize="False" ClipboardContentBinding="{x:Null}" Header="Precio" Width="3*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label Content="PRODUCTOS DISPONIBLES" Height="26" Margin="10,10,9.6,0" VerticalAlignment="Top" HorizontalContentAlignment="Center"/>
+        <Button x:Name="btAddProducto" Content="ADD" HorizontalAlignment="Left" Margin="324,187,0,0" VerticalAlignment="Top" Width="47" Height="30" Click="btAddProducto_Click" />
+        <TextBox x:Name="tbCantidad" Text="{Binding Path= ProductoAvituallamiento.Cantidad}" HorizontalAlignment="Left" Height="23" Margin="158,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="49" RenderTransformOrigin="0.894,0.503"/>
+        <Label Content="Introduce la cantidad" HorizontalAlignment="Left" Margin="10,160,0,0" VerticalAlignment="Top" Height="23" Width="133"/>
+    </Grid>
+</Window>
